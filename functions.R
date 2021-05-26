@@ -1,21 +1,10 @@
 # Example data =================================================================
 
-#example_verification_data <- read.table(
-#  "example_data_sheet.txt", header = TRUE, sep = "\t", dec = ","
-#)
+example_verification_data <- read.table(
+  "example_data_sheet.txt", header = TRUE, sep = "\t", dec = ","
+)
 
 # Custom functions =============================================================
-
-loq <- function(x) {
-  valid <- x$SD <= 0.33
-  valid[is.na(valid)] <- FALSE
-  if (!valid[[1]]) {
-    stop("LOQ cannot be established.", call. = FALSE)
-  }
-  to_row <- rle(valid)$lengths[[1]]
-  x <- x[seq_len(to_row), ]
-  min(x$Anticipated)
-}
 
 import_verification_data <- function(file, sep = "\t", dec = ".", ...) {
   read.table(file, header = TRUE, sep = sep, dec = dec, ...)
@@ -64,8 +53,19 @@ count_table <- function(x) {
   df
 }
 
+loq <- function(x) {
+    valid <- x$SD <= 0.33
+    valid[is.na(valid)] <- FALSE
+    if (!valid[[1]]) {
+        stop("LOQ cannot be established.", call. = FALSE)
+    }
+    to_row <- rle(valid)$lengths[[1]]
+    x <- x[seq_len(to_row), ]
+    min(x$Anticipated)
+}
+
 cv <- function(x) {
-  sd(x, na.rm = TRUE) /  mean(x, na.rm = TRUE) * 100
+    sd(x, na.rm = TRUE) /  mean(x, na.rm = TRUE) * 100
 }
 
 precision_table <- function(x) {

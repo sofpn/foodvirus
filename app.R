@@ -1,6 +1,5 @@
 library(shiny)
 library(shinydashboard)
-library(magrittr)
 source("functions.R")
 
 # Conditional panels ===========================================================
