@@ -71,6 +71,9 @@ cv <- function(x) {
 precision_table <- function(x) {
   data.frame(
     "Anticipated" = unique(x$Anticipated),
+    "SD" = unname(
+      rev(tapply(x$Obtained, x$Anticipated, sd, na.rm = TRUE))
+    ),
     "CV" = unname(rev(tapply(x$Obtained, x$Anticipated, cv))),
     "Anticipated_log10" = unique(log10(x$Anticipated)),
     "SD_log10" = unname(

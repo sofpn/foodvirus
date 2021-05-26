@@ -38,7 +38,7 @@ ui <- dashboardPage(
                             h5(
                                 "If you experience any problems or want to 
                                 report bugs, please contact us at 
-                                eurlfoodvirus@slv.se"
+                                eurlfoodvirus@slv.se."
                             ),
                             br(),
                             uiOutput("codelink"),
