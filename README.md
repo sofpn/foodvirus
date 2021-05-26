@@ -3,15 +3,18 @@
 
 ## EURL verguide
 
-This is the code for the Shiny application EURL-verguide.
+This repository contains the source code for the R Shiny application
+EURL-verguide.
 
 ## Launching the app
 
-The application is available online at:
-<https://sofpn.shinyapps.io/EURL-verguide>
+The application can be launched in two ways:
 
-If you have R installed, you can also launch it directly from your
-computer, by running the following code from the R console:
+  - Online, at: <https://sofpn.shinyapps.io/EURL-verguide>
+  - Via R on your computer, by running the following code from the R
+    console:
+
+<!-- end list -->
 
 ``` r
 if (!requireNamespace("shiny", quietly = TRUE)) install.packages("shiny")

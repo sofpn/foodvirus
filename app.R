@@ -10,6 +10,7 @@ upload <- conditionalPanel(
         "file1", "", multiple = FALSE, accept = c("text")
     )
 )
+
 useExample <- conditionalPanel(
     condition = "input.fileInput == 'Use example data'",
 )
@@ -85,12 +86,12 @@ ui <- dashboardPage(
                         ),
                         box(
                             title = "Linearity",
-                            plotOutput("plot2", height = 300, width = 400),
+                            plotOutput("plot1", height = 300, width = 400),
                             width = 12
                         ),
                         box(
                             title = "Precision and LOQ",
-                            plotOutput("plot3", height = 300, width = 400),
+                            plotOutput("plot2", height = 300, width = 400),
                             br(),
                             hr(),
                             br(),
@@ -173,19 +174,19 @@ server <- function(input, output) {
         )
     })
     
-    output$plot2 <- renderPlot({
+    output$plot1 <- renderPlot({
         req(mydata())
         req(input$from)
         plot_linearity(mydata(), as.numeric(input$from))
     })
     
-    output$plot3 <- renderPlot({
+    output$plot2 <- renderPlot({
         req(mydata())
         req(input$from)
         plot_precision(mydata(), as.numeric(input$from))
     })
     
-    url <- a("Source code", href="https://github.com/sofpn/EURL-verguide")
+    url <- a("Source code", href = "https://github.com/sofpn/EURL-verguide")
     output$codelink <- renderUI({
         tagList(url)
     })
