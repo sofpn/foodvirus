@@ -5,9 +5,6 @@
 
 This is the code for the Shiny application ‘EURL-verguide’.
 
-Note that the application is under development, and the output and
-format may change over time.
-
 ## Launching the app
 
 The application is available online at:
