@@ -34,7 +34,7 @@ add_detected_anticipated <- function(x) {
 
 e_lod <- function(x) {
   count <- count_table(x)
-  all_detected <- count$Positive/count$Total == 1
+  all_detected <- count$Positive / count$Total == 1
   if (!all_detected[[1]]) {
     stop("eLOD cannot be established.", call. = FALSE)
   }
@@ -74,7 +74,6 @@ precision_table <- function(x) {
     "SD" = unname(
       rev(tapply(x$Obtained, x$Anticipated, sd, na.rm = TRUE))
     ),
-    "CV" = unname(rev(tapply(x$Obtained, x$Anticipated, cv))),
     "Anticipated_log10" = unique(log10(x$Anticipated)),
     "SD_log10" = unname(
       rev(tapply(log10(x$Obtained), x$Anticipated, sd, na.rm = TRUE))

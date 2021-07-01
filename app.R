@@ -136,7 +136,9 @@ server <- function(input, output) {
     
     output$table3 <- renderTable({
         req(mydata())
-        precision_table(mydata())
+        x <- precision_table(mydata())
+        names(x) <- c("Anticipated", "SD", "Anticipated, log10", "SD, log10")
+        x
     })
     
     output$download1 <- downloadHandler(
