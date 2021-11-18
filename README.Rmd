@@ -29,7 +29,7 @@ To install foodvirus, start R (version 4.1) and enter:
 ``` r
 if (!requireNamespace("devtools", quietly = TRUE))
   install.packages("devtools")
-devtools::install_github("sofpn/foodvirus")
+devtools::install_github("sofpn/foodvirus", build_vignettes = TRUE)
 ```
 
 ## Start the application
@@ -42,7 +42,7 @@ foodvirus::runEURLVerguide()
 
 ## More information
 
-Please see the pdf "EURLVerguide-instructions" within the doc folder of this repository for more information on how to use the application. 
+Please see the package vignette "EURLVerguide-instructions" for more information on how to use the application. It is loaded by `browseVignettes("foodvirus")`
 
 ## Citation 
 
