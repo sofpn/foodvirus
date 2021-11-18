@@ -1,0 +1,29 @@
+citHeader("To cite foodvirus in publications use:")
+
+citEntry(
+  entry    = "Unpublished",
+  note     = "Manuscript in preparation",
+  title    = "In-house validation of an optimised method for quantitative
+  detection of hepatitis E virus in pork products",
+  author   = personList(
+  as.person("Sofia Persson"),
+  as.person("Ramia Molin"),
+  as.person("Ronnie Eriksson"),
+  as.person("Moa Lavander"),
+  as.person("Frederik Widen"),
+  as.person("Patrik Ellstroem"),
+  as.person("Magnus Simonsson")
+  ),
+  journal  = "",
+  year     = "2021",
+  volume   = "",
+  number   = "",
+  pages    = "",
+  url      = "https://github.com/sofpn/foodvirus",
+  textVersion = paste("Sofia Persson, Ramia Molin, Ronnie Eriksson, Moa Lavander, Frederik Widen, Patrik Ellstroem, and Magnus Simonsson (2021).",
+  "In-house validation of an optimised method for quantitative
+  detection of hepatitis E virus in pork products",
+  "Manuscript in preparation.",
+  "URL: https://github.com/sofpn/foodvirus."
+  )
+)

@@ -1,22 +1,42 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-## EURL verguide
+# R-package: foodvirus
 
-This repository contains the source code for the R Shiny application
-EURL-verguide.
+<!-- badges: start -->
+<!-- badges: end -->
 
-## Launching the app
+Foodvirus contains an application, EURLVerguide, that determines
+performance characteristics during verification or in-house validation
+of PCR based methods in food virology.
 
-The application can be launched in two ways:
+The package is developed and maintained by the EU reference laboratory
+(EURL) for foodborne viruses.
 
-  - Online, at: <https://sofpn.shinyapps.io/EURL-verguide>
-  - Via R on your computer, by running the following code from the R
-    console:
+## Installation
 
-<!-- end list -->
+To install foodvirus, start R (version 4.1) and enter:
 
 ``` r
-if (!requireNamespace("shiny", quietly = TRUE)) install.packages("shiny")
-shiny::runGitHub("EURL-verguide", "sofpn", ref = "main")
+if (!requireNamespace("devtools", quietly = TRUE))
+  install.packages("devtools")
+devtools::install_github("sofpn/foodvirus")
 ```
+
+## Start the application
+
+Enter the following code to start the EURLVerguide application:
+
+``` r
+foodvirus::runEURLVerguide()
+```
+
+## More information
+
+Please see the pdf “EURLVerguide-instructions” within the doc folder of
+this repository for more information on how to use the application.
+
+## Citation
+
+To cite foodvirus, please use the information listed under
+`citation("foodvirus")`

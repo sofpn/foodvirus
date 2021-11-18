@@ -1,0 +1,40 @@
+Type: Package
+Package: foodvirus
+Title: A Tool For Determining Performance Criteria for Food Virology Methods 
+Version: 0.1.0
+Description: A Shiny application to determine performance characteristics
+    during verification and in-house validation of PCR based methods 
+    in food virology.
+Authors@R: 
+    person(given = "Sofia",
+           family = "Persson",
+           role = c("aut", "cre"),
+           email = "sofiapersson27@gmail.com",
+           comment = c(ORCID = "0000-0003-2611-3030"))
+License: GPL-3
+URL: https://github.com/sofpn/foodvirus
+BugReports: https://github.com/sofpn/foodvirus/issues
+Depends: 
+    R (>= 4.1)
+Imports:
+    bslib,
+    DT,
+    ggplot2,
+    methods,
+    S4Vectors,
+    shiny,
+    shinycssloaders,
+    shinydashboard,
+    shinyFeedback
+Suggests: 
+    BiocStyle,
+    kableExtra,
+    knitr,
+    rmarkdown,
+    styler,
+    testthat (>= 3.0.0)
+VignetteBuilder: 
+    knitr
+Encoding: UTF-8
+RoxygenNote: 7.1.1
+Config/testthat/edition: 3
