@@ -3,7 +3,7 @@ title: "Getting started with `EURLVergide`"
 author: "Sofia Persson"
 affiliation: "Swedish Food Agecy"
 package: foodvirus
-output: pdf_document
+output: BiocStyle::html_document
 vignette: >
   %\VignetteIndexEntry{foodvirus}
   %\VignetteEngine{knitr::rmarkdown}
