@@ -4,6 +4,8 @@
 # R-package: foodvirus
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/sofpn/EURL-verguide/workflows/R-CMD-check/badge.svg)](https://github.com/sofpn/EURL-verguide/actions)
 <!-- badges: end -->
 
 Foodvirus contains an application, EURLVerguide, that determines
