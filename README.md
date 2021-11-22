@@ -17,7 +17,7 @@ The package is developed and maintained by the EU reference laboratory
 
 ## Installation
 
-To install foodvirus, start R (version 4.1) and enter:
+To install foodvirus, start R (version 4.1 or higher) and enter:
 
 ``` r
 if (!requireNamespace("devtools", quietly = TRUE))
@@ -37,9 +37,9 @@ foodvirus::runEURLVerguide()
 
 Please see the package vignette “EURLVerguide-instructions” for more
 information on how to use the application. It is loaded by
-`browseVignettes("foodvirus")`
+`browseVignettes("foodvirus")`.
 
 ## Citation
 
 To cite foodvirus, please use the information listed under
-`citation("foodvirus")`
+`citation("foodvirus")`.

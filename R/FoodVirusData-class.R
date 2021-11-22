@@ -6,7 +6,7 @@
 #' A \code{FoodVirusData}-object has a data-frame structure and contains
 #' two numeric variables: dilution and obtained.
 #'
-#' The class extends the \code{S4Vectors::DataFrame} class
+#' The class extends the DFrame class from S4 vectors
 #' (Pages et al., 2021), without any additional slots.
 #'
 #' @param ...
@@ -39,10 +39,11 @@
 FoodVirusData <- function(...) {
     x <- S4Vectors::DataFrame(..., row.names = NULL, check.names = TRUE)
     names(x) <- tolower(names(x))
+    x$obtained[x$obtained == 0] <- NA
     .FoodVirusData(x)
 }
 
-.FoodVirusData <- setClass("FoodVirusData", contains = "DataFrame")
+.FoodVirusData <- setClass("FoodVirusData", contains = "DFrame")
 
 S4Vectors::setValidity2("FoodVirusData", \(object) {
     msg <- NULL
