@@ -35,7 +35,8 @@ anticipatedServer <- function(id, data) {
             names(x) <- c(
                 "Anticipated conc.",
                 "Number of observations",
-                "Number of positive observations"
+                "Number of positive observations",
+                "Proportion of positive observations"
             )
             x
         })

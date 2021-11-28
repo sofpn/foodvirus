@@ -78,7 +78,8 @@ eLod <- function(x) {
 countTable <- function(x) {
   total <- tapply(x$detected, x$anticipated, length)
   positive <- tapply(x$detected, x$anticipated, sum)
-  df <- data.frame(anticipated = names(total), total, positive)
+  proportion <- positive/total
+  df <- data.frame(anticipated = names(total), total, positive, proportion)
   df$anticipated <- as.double(df$anticipated)
   df <- df[rev(seq_len(nrow(df))), ]
   rownames(df) <- NULL

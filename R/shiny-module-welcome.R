@@ -22,11 +22,6 @@ welcomeUI <- function(id) {
                 "Report bugs", shiny::icon("github")
             )),
             shiny::h5("Contact us: eurlfoodvirus@slv.se"),
-            shiny::h5(
-                "Disclaimer: this application is under development.
-                The format may change over time and we leave no
-                guarantee for its correctness."
-            ),
             width = 12
         )
     )
